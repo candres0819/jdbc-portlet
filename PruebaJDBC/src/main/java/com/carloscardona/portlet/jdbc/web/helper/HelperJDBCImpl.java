@@ -1,4 +1,4 @@
-package co.com.proteccion.internet.jdbc.web.helper;
+package com.carloscardona.portlet.jdbc.web.helper;
 
 import java.io.IOException;
 
@@ -14,14 +14,13 @@ import org.springframework.web.portlet.ModelAndView;
 
 /**
  * 
- * 
- * @author carlos.cardona
- * 
+ * @author candr
+ *
  */
 @Repository
-public class PruebaJDBCHelperImpl implements PruebaJDBCHelper {
+public class HelperJDBCImpl implements HelperJDBC {
 
-	public static final Logger LOGGER = LoggerFactory.getLogger(PruebaJDBCHelperImpl.class);
+	public static final Logger LOGGER = LoggerFactory.getLogger(HelperJDBCImpl.class);
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -36,7 +35,7 @@ public class PruebaJDBCHelperImpl implements PruebaJDBCHelper {
 	@Override
 	public ModelAndView submit(ActionRequest request, ModelAndView mv) throws IOException, Exception {
 		try {
-			this.jdbcTemplate.execute("ALTER TABLE TGCE_ESTADOS MODIFY ESTDSCOMENTARIO Varchar2(1000)");
+			this.jdbcTemplate.execute("ALTER TABLE TABLA_X MODIFY CAMPO Varchar2(1000)");
 			mv.addObject("mensaje", "Se ha alterado la tabla correctamente");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -45,5 +44,4 @@ public class PruebaJDBCHelperImpl implements PruebaJDBCHelper {
 		mv.setViewName("result");
 		return mv;
 	}
-
 }

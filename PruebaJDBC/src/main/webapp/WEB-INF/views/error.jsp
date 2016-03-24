@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 
 <div id="WrapTransacciones-General">
-	<table width="75%" border="0" cellspacing="0" cellpadding="0" align="center" class="tableError marginCenter">
+	<table class="tableError marginCenter">
 		<tr>
 			<td rowspan="3" align="center" width="15%" class="valign"><div class="divError"></div></td>
 			<td align="left" width="85%" class="tituloError valignMiddle">${error}</td>

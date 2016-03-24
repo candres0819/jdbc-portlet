@@ -14,7 +14,7 @@
 
 	<!-- context -->
 	<context:annotation-config />
-	<context:component-scan base-package="co.com.proteccion.internet.jdbc.web" />
+	<context:component-scan base-package="com.carloscardona.portlet.jdbc.web" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -23,13 +23,11 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/dsORAGCE"/>
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/dsORATEST"/>
 
 	<bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg>
 			<ref bean="dataSource" />
 		</constructor-arg>
 	</bean>
-
-	<jee:jndi-lookup id="portletServiceHome" jndi-name="portletservice/com.ibm.portal.portlet.service.login.LoginHome" lookup-on-startup="true" expected-type="com.ibm.portal.portlet.service.PortletServiceHome" />
 </beans>

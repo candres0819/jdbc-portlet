@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
 	id="PruebaJDBC">
 	<portlet>
-		<portlet-name>PruebaJDBC</portlet-name>
-		<display-name xml:lang="en">Protección - Prueba JDBC - (JSR 286)</display-name>
-		<display-name xml:lang="es">Protección - Prueba JDBC - (JSR 286)</display-name>
-		<display-name>RadicacionPQR</display-name>
+		<portlet-name>PortletJDBC</portlet-name>
+		<display-name xml:lang="en">Portal - Portlet JDBC - (JSR 286)</display-name>
+		<display-name xml:lang="es">Portal - Portlet JDBC - (JSR 286)</display-name>
+		<display-name>PortletJDBC</display-name>
 		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
 		<init-param>
 			<name>contextConfigLocation</name>
-			<value>/WEB-INF/appContext-prueba.xml</value>
+			<value>/WEB-INF/spring/appContext-jdbc-portlet.xml</value>
 		</init-param>
 		<expiration-cache>0</expiration-cache>
 		<supports>
@@ -20,12 +20,12 @@
 		</supports>
 		<supported-locale>es</supported-locale>
 		<supported-locale>en</supported-locale>
-		<resource-bundle>co.com.proteccion.internet.jdbc.web.portlet.nl.PruebaJDBCPortletResource</resource-bundle>
+		<resource-bundle>com.carloscardona.portlet.jdbc.web.nl.PortletJDBCResource</resource-bundle>
 		<portlet-info>
-			<title>Protección - Prueba JDBC - (JSR 286)</title>
-			<short-title>Protección - Prueba JDBC - (JSR 286)</short-title>
-			<keywords>Protección - Prueba JDBC - (JSR 286)</keywords>
+			<title>Portal - Portlet JDBC - (JSR 286)</title>
+			<short-title>Portal - Portlet JDBC - (JSR 286)</short-title>
+			<keywords>Portal - Portlet JDBC - (JSR 286)</keywords>
 		</portlet-info>
 	</portlet>
-	<default-namespace>http://PruebaJDBC/</default-namespace>
+	<default-namespace>http://PortletJDBC/</default-namespace>
 </portlet-app>

@@ -1,4 +1,4 @@
-package co.com.proteccion.internet.jdbc.web.helper;
+package com.carloscardona.portlet.jdbc.web.helper;
 
 import java.io.IOException;
 
@@ -13,17 +13,17 @@ import org.springframework.web.portlet.ModelAndView;
  * @author carlos.cardona
  *
  */
-public interface PruebaJDBCHelper {
+public interface HelperJDBC {
 
 	/**
 	 * 
 	 * 
 	 * @param request
-	 * @param mv
-	 * @return
+	 * @param model
+	 * @return ModelAndView view
 	 * @throws Exception
 	 */
-	ModelAndView render(PortletRequest request, ModelAndView mv) throws Exception;
+	ModelAndView render(PortletRequest request, ModelAndView model) throws Exception;
 
 	/**
 	 * 
@@ -35,5 +35,4 @@ public interface PruebaJDBCHelper {
 	 * @throws Exception
 	 */
 	ModelAndView submit(ActionRequest request, ModelAndView mv) throws IOException, Exception;
-
 }

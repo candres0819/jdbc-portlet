@@ -1,4 +1,4 @@
-package co.com.proteccion.internet.jdbc.web.portlet;
+package com.carloscardona.portlet.jdbc.web.portlet;
 
 import java.io.IOException;
 
@@ -14,17 +14,17 @@ import org.springframework.web.portlet.ModelAndView;
 import org.springframework.web.portlet.bind.annotation.ActionMapping;
 import org.springframework.web.portlet.bind.annotation.RenderMapping;
 
-import co.com.proteccion.internet.jdbc.web.helper.PruebaJDBCHelper;
+import com.carloscardona.portlet.jdbc.web.helper.HelperJDBC;
 
 /**
  * A sample portlet
  */
 @Controller
 @RequestMapping("VIEW")
-public class PruebaJDBCPortlet {
+public class PortletJDBC {
 
 	@Autowired
-	private PruebaJDBCHelper helper;
+	private HelperJDBC helper;
 
 	/**
 	 * Presenta las vistas tipo render y pos action.
